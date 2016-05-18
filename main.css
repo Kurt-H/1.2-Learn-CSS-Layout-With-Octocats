@@ -528,6 +528,7 @@ table {
 
 /***********************begin homework***********************/
 
+
 *{
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -545,11 +546,12 @@ table {
 }
 
 .octocat {
-    width: 30%;
+    width: 31%;
     display: inline-block;
     vertical-align: top;
     border-bottom: 1px lightgrey solid;
-    margin: 0 auto;
+    margin-left: 24px;
+
 }
 
 .octocat img{
@@ -563,21 +565,33 @@ table {
   display:inline;
 }
 
+.image-number:before{
+  content: "#";
+}
 
-/***********FOOTER**********/
-.authors{
-  padding: 0;
-  margin: 0;
-  display: inline;
+ul.authors{
+  display:inline-block;
+  margin-left: 0;
+
+}
+
+.authors a{
+  width: 30px;
+  display: inline-block;
 }
 
 .authors img{
   border: 1px blue solid;
-
   margin-left: 2px;
   display: inline-block;
   width: 30px;
   height: 30px;
+  border-radius: 2px;
+
+}
+
+.authors li{
+  list-style: none;;
 }
 
 span {
@@ -599,4 +613,10 @@ span {
   display:inline-block;
   border: 1px orange solid;
   text-decoration: none;
+}
+
+.image-footer{
+  padding: 12px;
+  line-height: 30px;
+  vertical-align: middle;
 }
