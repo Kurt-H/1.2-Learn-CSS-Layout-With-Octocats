@@ -157,9 +157,6 @@ h6 {
  * Address styling not present in IE 7/8/9, Safari 5, and Chrome.
  */
 
-abbr[title] {
-    border-bottom: 1px dotted;
-}
 
 /**
  * Address style set to `bolder` in Firefox 3+, Safari 4/5, and Chrome.
@@ -370,7 +367,7 @@ form {
  */
 
 fieldset {
-    border: 1px solid #c0c0c0;
+
     margin: 0 2px;
     padding: 0.35em 0.625em 0.75em;
 }
@@ -549,15 +546,14 @@ table {
     width: 31%;
     display: inline-block;
     vertical-align: top;
-    border-bottom: 1px lightgrey solid;
+    border-bottom: 1px solid rgb(213, 213, 213);
     margin-left: 24px;
-
 }
 
 .octocat img{
   display:block;
-  border: 1px lightgrey solid;
-  border-radius: 2px;
+  border: 1px solid rgb(213, 213, 213);
+  border-radius: 3px;
   width: 100%;
 }
 
@@ -565,14 +561,36 @@ table {
   display:inline;
 }
 
+.octocat a{
+  position:relative;
+  }
+
+
+
+.lrg-img::after {
+position:absolute;
+content:"";
+width:0px;
+height:0px;
+border-top: 7px solid rgb(202, 202, 202);
+border-right: 7px solid transparent;
+border-bottom: 7px solid transparent;
+border-left: 7px solid transparent;
+left:369px;
+}
+
+
+
 .image-number:before{
   content: "#";
 }
 
+
 ul.authors{
   display:inline-block;
-  margin-left: 0;
-
+  margin: 0;
+  padding: 0;
+  float: right;
 }
 
 .authors a{
@@ -581,42 +599,46 @@ ul.authors{
 }
 
 .authors img{
-  border: 1px blue solid;
   margin-left: 2px;
   display: inline-block;
   width: 30px;
   height: 30px;
-  border-radius: 2px;
-
+  border-radius: 3px;
 }
 
 .authors li{
-  list-style: none;;
+  list-style: none;
+  padding-left: 5px;
+  font-weight: bold;
 }
 
-span {
-  display: inline-block;
-  border: 1px blue solid;
-}
 
 .image-number{
   display: inline-block;
-  border: 1px red solid;
+  color: rgb(202, 202, 202);
+  padding-top: 10px;
 }
 
-.image-caption span{
+.image-caption {
   display:inline-block;
-  border: 1px green solid;
+  padding-top: 10px;
+  float: right;;
   }
 
-.image-caption a{
+.image-caption a, span{
   display:inline-block;
-  border: 1px orange solid;
   text-decoration: none;
 }
 
+.image-caption span{
+  color: rgb(121, 117, 117);
+}
+
+.image-caption a{
+  color: rgb(45, 45, 45);
+  font-weight: bold;
+}
+
 .image-footer{
-  padding: 12px;
   line-height: 30px;
-  vertical-align: middle;
 }
